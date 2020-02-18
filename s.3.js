@@ -4,9 +4,9 @@ const filter3 = () => {
   const sortedArr = {};
 
   d.forEach(item => {
-    sortedArr[item.category] = Array.isArray(sortedArr[item.category])
+    Array.isArray(sortedArr[item.category])
       ? sortedArr[item.category].push(item)
-      : [item];
+      : sortedArr[item.category] = [item];
   });
 
   return sortedArr;
